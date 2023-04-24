@@ -1,4 +1,4 @@
-# Changes for the submission for the technical challenge:
+# Changes for the submission of the technical challenge:
 - Fixed functionality for the checked dice
 - Created Score list
 - Created reset game function

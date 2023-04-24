@@ -5,3 +5,4 @@
 - Created calculate score function
 - Made changes to the css (rounded buttons, score list)
 - Fixed a bug with images updating on the dice
+- Added total score

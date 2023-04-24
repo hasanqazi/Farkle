@@ -32,6 +32,9 @@ function rollDice() {
     document.getElementsByClassName("score")[0].innerHTML = score;
     totalScore = score;
   }
+
+	updateTotalScoreDisplay();
+
   console.log(totalScore);
 }
 
@@ -104,4 +107,22 @@ function resetGame() {
 	document.getElementsByClassName("score")[0].innerHTML = 0;
 	totalScore = 0;
 	rollDice();
+}
+
+function calculateTotalScore() {
+  let scoreList = document.getElementById("score-list");
+  let scoreItems = scoreList.querySelectorAll("li");
+  let sumScore = 0;
+  for (let i = 0; i < scoreItems.length; i++) {
+    let scoreText = scoreItems[i].textContent;
+    let score = parseInt(scoreText);
+    sumScore += score;
+  }
+  return sumScore;
+}
+
+function updateTotalScoreDisplay() {
+  let displayScore = calculateTotalScore();
+  let totalScoreDisplay = document.getElementById("total-score");
+  totalScoreDisplay.textContent = `Total Score: ${displayScore}`;
 }
